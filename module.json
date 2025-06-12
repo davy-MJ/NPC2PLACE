@@ -15,7 +15,7 @@
   ],
   "url": "https://www.stream-adventure.fr/npc2place/",
   "manifest": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/main/module.json",
-  "download": "https://github.com/davy-MJ/NPC2PLACE/releases/latest/download/npc2place.zip",
+  "download": "https://github.com/davy-MJ/NPC2PLACE/releases/latest/download/npc2place.zip?raw=true",
   "icon": "modules/npc2place/icons/setup-cover.png",
   "media": [
     {
