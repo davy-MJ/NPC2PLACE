@@ -5,43 +5,19 @@
   "description": "Permet de transformer un PNJ (type npc) en fiche de planète ou de lieu dans l’univers Spatiopolis, avec style visuel sélectionnable. Compatible avec SWADE.",
   "version": "1.0.0",
   "author": "Davy_mj",
-  "minimumCoreVersion": "11",
-  "compatibleCoreVersion": "13",
   "type": "module",
   "esmodules": ["scripts/main.js"],
-  "packs": [],
   "languages": [
-    {
-      "lang": "fr",
-      "name": "Français",
-      "path": "lang/fr.json"
-    },
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json"
-    },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json"
-    }
+    { "lang": "fr", "name": "Français", "path": "lang/fr.json", "flags": {} },
+    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
+    { "lang": "es", "name": "Español", "path": "lang/es.json", "flags": {} },
+    { "lang": "de", "name": "Deutsch", "path": "lang/de.json", "flags": {} }
   ],
-  "systems": ["swade"],
   "url": "https://www.stream-adventure.fr/npc2place/",
-  "manifest": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/refs/heads/main/module.json",
-  "download": "https://github.com/davy-MJ/NPC2PLACE/raw/refs/heads/main/npc2place.zip?raw=true",
+  "manifest": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/main/module.json",
+  "download": "https://github.com/davy-MJ/NPC2PLACE/releases/latest/download/npc2place.zip",
   "icon": "modules/npc2place/icons/setup-cover.png",
   "media": [
-    {
-      "type": "setup",
-      "url": "modules/npc2place/icons/setup-cover.png"
-    },
     {
       "type": "cover",
       "url": "https://www.stream-adventure.fr/npc2place/setup-cover.png"
@@ -49,6 +25,16 @@
   ],
   "compatibility": {
     "minimum": "11",
-    "verified": "13"
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "swade",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
   }
 }
