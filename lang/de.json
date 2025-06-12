@@ -1,10 +1,10 @@
 {
   "npc2place": {
-    "themeLabel": "Visuelles Thema der Datenblätter",
-    "themeHint": "Legt den grafischen Stil der Blätter fest (Sci-Fi oder Mittelalter).",
+    "themeLabel": "Visuelles Stilblatt",
+    "themeHint": "Bestimmt den grafischen Stil, der auf Planeten- und Ortsblätter angewendet wird (Sci-Fi oder Mittelalter).",
     "themeSciFi": "Science-Fiction",
     "themeMedieval": "Mittelalterlich",
-    "themeChanged": "Thema geändert. Benutzeroberfläche wird neu geladen...",
+    "themeChanged": "Stil geändert. Benutzeroberfläche wird neu geladen...",
 
     "sheet": {
       "planete": "NPC to Place – Planet",
@@ -12,13 +12,13 @@
     },
 
     "settings": {
-      "separatorTheme": "🎨 — Visuelles Thema —",
-      "separatorPlanetes": "🌍 — Planeten-Einstellungen —",
-      "separatorLieux": "🏙️ — Ortseinstellungen —",
+      "separatorTheme": "🎨 Visueller Stil",
+      "separatorPlanetes": "🌍 Planeten-Einstellungen",
+      "separatorLieux": "🏙️ Orte-Einstellungen",
 
       "styleActif": {
-        "name": "Visuelles Thema der Datenblätter",
-        "hint": "Wähle einen Darstellungsstil für Planet- und Ortsblätter.",
+        "name": "Visueller Stil der Blätter",
+        "hint": "Wählen Sie einen Anzeigestil für Planet- und Ortsblätter.",
         "sci-fi": "Futuristischer Stil",
         "medieval": "Mittelalterlicher Stil"
       },
@@ -31,7 +31,7 @@
         "hint": "Z. B.: Unbewohnbar;Teilweise bewohnbar;Vollständig bewohnbar"
       },
       "listeEspeces": {
-        "name": "Liste der Sekundärspezies",
+        "name": "Liste sekundärer Spezies",
         "hint": "Mit Semikolon getrennt"
       },
       "listeAffiliations": {
@@ -39,65 +39,71 @@
         "hint": "Mit Semikolon getrennt"
       },
       "listeTypesLieux": {
-        "name": "Arten von Orten",
-        "hint": "Liste der Typen (z. B. Stadt, Militärbasis...) mit Semikolon getrennt"
+        "name": "Ortstypen",
+        "hint": "Liste der Typen (z. B.: Stadt, Militärbasis...) mit Semikolon getrennt"
       },
       "listeTaillesLieux": {
-        "name": "Ortsgrößen",
-        "hint": "Liste der Größen (z. B. Klein, Mittel...) mit Semikolon getrennt"
+        "name": "Größen von Orten",
+        "hint": "Liste der Größen (z. B.: Klein, Mittel...) mit Semikolon getrennt"
       },
       "listeGouvernances": {
-        "name": "Regierungsformen",
-        "hint": "Liste der Regierungsformen (z. B. Lokaler Rat...) mit Semikolon getrennt"
+        "name": "Arten der Regierungsform",
+        "hint": "Liste möglicher Regierungsformen mit Semikolon getrennt"
       },
       "listeSituationsGeo": {
-        "name": "Geografische Lage",
+        "name": "Geografische Lagen",
         "hint": "Liste der Gelände- oder Umwelttypen mit Semikolon getrennt"
       },
       "listeActivites": {
-        "name": "Hauptaktivitäten der Orte",
-        "hint": "Liste der möglichen Aktivitäten, mit Semikolon getrennt"
+        "name": "Hauptaktivitäten",
+        "hint": "Liste möglicher Aktivitäten mit Semikolon getrennt"
       },
       "listeInfrastructures": {
         "name": "Verfügbare Infrastrukturen",
         "hint": "Liste mit Semikolon getrennt"
+      },
+      "reset": {
+        "name": "Einstellungen zurücksetzen",
+        "label": "▶ Jetzt zurücksetzen",
+        "hint": "Lädt alle Listen basierend auf der aktiven Sprache neu.",
+        "confirm": "✅ NPC2Place-Einstellungen wurden gemäß der aktiven Sprache zurückgesetzt."
       }
     },
 
     "listeTypesPlaneteDefault": "Terrestrisch;Gasförmig;Ozeanisch;Arktisch;Vulkanisch;Biotechnologisch",
     "listeHabitabilitesDefault": "Unbewohnbar;Teilweise bewohnbar;Vollständig bewohnbar",
-    "listeEspecesDefault": "Elothianer;Tymbri;Kosmopoliten;Sarianer;Oeganer;Telkinen;Arkturianer;Synthetische",
-    "listeAffiliationsDefault": "Galaktische Union;Koalition der nicht ausgerichteten Welten;Kosmische Bruderschaft;Privates Unternehmen;Unabhängig",
-    "listeTypesLieuxDefault": "Stadt;Militärbasis;Forschungszentrum;Bergbau-Außenposten;Klimastation;Diplomatische Zone;Tempel;Universität;Raumhafen;Historischer Ort;Kolonie;Geheimbasis;Wiederverwendetes Wrack;Agrarkuppel;Nomadenlager;Kryo-Komplex;Medizinisches Zentrum;Gefängnis;Orbitalplattform;Handelsviertel;Station",
+    "listeEspecesDefault": "Elothianer;Tymbri;Kosmopoliten;Sarier;Oeganer;Telkinen;Arkturianer;Synthetiker",
+    "listeAffiliationsDefault": "Galaktische Union;Koalition der Nicht-Angeschlossenen Welten;Kosmische Bruderschaft;Privatunternehmen;Unabhängig",
+    "listeTypesLieuxDefault": "Stadt;Militärbasis;Forschungseinrichtung;Bergbau-Außenposten;Klimastation;Diplomatische Zone;Tempel;Universität;Raumhafen;Historischer Ort;Kolonie;Geheimbasis;Wiederverwertetes Wrack;Agrarkuppel;Nomadenlager;Kryo-Komplex;Medizinisches Zentrum;Gefängnis;Orbitalplattform;Handelsviertel;Station",
     "listeTaillesLieuxDefault": "Klein;Mittel;Groß;Metropole",
-    "listeGouvernancesDefault": "Lokaler Rat;Militärische Autorität;Künstliche Intelligenz;Zentralregierung;Einheimischer Stamm;Privatunternehmen;Alleinherrscher;Demokratisches System;Religiöse Organisation;Keine",
-    "listeSituationsGeoDefault": "Kommerziell;Militärisch;Landwirtschaftlich;Wissenschaftlich;Religiös;Bergbau;Bildung;Industriell;Kulturell;Politisch;Touristisch;Wohngebiet;Technologisch;Medizinisch;Logistisch;Künstlerisch;Diplomatisch;Weltraum;Ökologisch;Zivil",
-    "listeActivitesDefault": "Kommerziell;Militärisch;Landwirtschaftlich;Wissenschaftlich;Religiös;Bergbau;Bildung;Industriell;Kulturell;Politisch;Touristisch;Wohngebiet;Technologisch;Medizinisch;Logistisch;Künstlerisch;Diplomatisch;Weltraum;Ökologisch;Zivil",
+    "listeGouvernancesDefault": "Lokaler Rat;Militärbehörde;Künstliche Intelligenz;Zentralregierung;Ureinwohnerstamm;Privatfirma;Einzelherrscher;Demokratisches System;Religiöse Organisation;Keine",
+    "listeSituationsGeoDefault": "Kommerziell;Militärisch;Landwirtschaftlich;Wissenschaftlich;Religiös;Bergbau;Bildung;Industriell;Kulturell;Politisch;Touristisch;Wohngebiet;Technologisch;Medizinisch;Logistisch;Künstlerisch;Diplomatisch;Im All;Ökologisch;Zivil",
+    "listeActivitesDefault": "Kommerziell;Militärisch;Landwirtschaftlich;Wissenschaftlich;Religiös;Bergbau;Bildung;Industriell;Kulturell;Politisch;Touristisch;Wohngebiet;Technologisch;Medizinisch;Logistisch;Künstlerisch;Diplomatisch;Im All;Ökologisch;Zivil",
     "listeInfrastructuresDefault": "Raumhafen;Kontrollturm;Labor;Agrarkuppel;Medizinische Station;Kommunikationszentrum;Hangar;Bunker;Solarmodule",
 
     "variationTemperature": {
       "Stable": "Stabil",
       "Modérée": "Mäßig",
-      "Forte": "Hoch",
+      "Forte": "Stark",
       "Extrême": "Extrem"
     },
 
     "respirabilite": {
-      "Respirable": "Atmungsfähig",
-      "Faiblement respirable": "Schwach atmungsfähig",
-      "Non respirable": "Nicht atmungsfähig"
+      "Respirable": "Atembar",
+      "Faiblement respirable": "Schwach atembar",
+      "Non respirable": "Nicht atembar"
     },
 
     "ressources": {
-      "header": "Nutzbare Ressourcen",
-      "dropHint": "Ziehe ein Verbrauchs- oder sonstiges Objekt hierher, um es diesem Planeten hinzuzufügen",
+      "header": "Verfügbare Ressourcen",
+      "dropHint": "Ziehe ein Objekt hierher (Verbrauchsgegenstand oder Sonstiges), um es dem Planeten hinzuzufügen",
       "open": "Öffnen",
       "remove": "Entfernen"
     },
 
     "lieux": {
       "header": "Verknüpfte wichtige Orte",
-      "dropHint": "Ziehe einen NSC hierher, um ihn mit diesem Planeten zu verknüpfen",
+      "dropHint": "Ziehe einen NSC hierher, um ihn mit dem Planeten zu verknüpfen",
       "open": "Öffnen",
       "remove": "Entfernen"
     },
@@ -109,14 +115,14 @@
       "habitabilite": "Bewohnbarkeit",
       "affiliation": "Politische Zugehörigkeit",
       "variationTemperature": "Temperaturvariation",
-      "respirabilite": "Atmungsfähigkeit",
+      "respirabilite": "Atembarkeit",
       "mondeMere": "Heimatwelt von:",
-      "dropSpecies": "Ziehe eine NSC-Figur hierher, um sie als dominierende Spezies hinzuzufügen",
-      "secondarySpeciesHeader": "Sekundärspezies",
-      "secondarySpeciesLabel": "Anwesende Sekundärspezies",
+      "dropSpecies": "Ziehe ein NSC-Blatt hierher, um eine Hauptspezies hinzuzufügen",
+      "secondarySpeciesHeader": "Sekundäre Spezies",
+      "secondarySpeciesLabel": "Vorhandene sekundäre Spezies",
       "linkedPlaces": "Verknüpfte wichtige Orte",
-      "dropLieu": "Ziehe einen NSC hierher, um ihn zu verknüpfen",
-      "dropRessource": "Ziehe ein Objekt hierher, um es diesem Planeten hinzuzufügen",
+      "dropLieu": "Ziehe einen NSC hierher, um ihn mit dem Planeten zu verknüpfen",
+      "dropRessource": "Ziehe ein Objekt hierher, um es dem Planeten hinzuzufügen",
       "description": "Beschreibung"
     },
 
@@ -125,13 +131,13 @@
       "informations": {
         "type": "Ortstyp",
         "taille": "Größe",
-        "gouvernance": "Regierung",
+        "gouvernance": "Regierungsform",
         "gestion": "Geografische Lage",
         "affiliation": "Zugehörigkeit",
         "activite": "Hauptaktivität"
       },
       "especes": {
-        "label": "Anwesende Sekundärspezies"
+        "label": "Vorhandene sekundäre Spezies"
       },
       "infrastructures": {
         "addLabel": "Infrastruktur hinzufügen",

@@ -1,26 +1,26 @@
 {
   "npc2place": {
-    "themeLabel": "Sheet visual theme",
-    "themeHint": "Determines the graphic style applied to the sheets (sci-fi or medieval).",
-    "themeSciFi": "Science Fiction",
+    "themeLabel": "Visual theme of sheets",
+    "themeHint": "Determines the graphic style applied to Planet and Place sheets (sci-fi or medieval).",
+    "themeSciFi": "Science-Fiction",
     "themeMedieval": "Medieval",
     "themeChanged": "Theme changed. Reloading interface...",
 
     "sheet": {
       "planete": "NPC to Place – Planet",
-      "place": "NPC to Place – Location"
+      "place": "NPC to Place – Place"
     },
 
     "settings": {
-      "separatorTheme": "🎨 — Visual Theme —",
-      "separatorPlanetes": "🌍 — Planet Settings —",
-      "separatorLieux": "🏙️ — Location Settings —",
+      "separatorTheme": "🎨 Visual Theme",
+      "separatorPlanetes": "🌍 Planet Settings",
+      "separatorLieux": "🏙️ Place Settings",
 
       "styleActif": {
-        "name": "Sheet visual theme",
-        "hint": "Choose a display style for Planet and Location sheets.",
-        "sci-fi": "Futuristic style",
-        "medieval": "Medieval style"
+        "name": "Visual style of sheets",
+        "hint": "Choose a display style for Planet and Place sheets.",
+        "sci-fi": "Futuristic Style",
+        "medieval": "Medieval Style"
       },
       "listeTypesPlanete": {
         "name": "Available planet types",
@@ -31,72 +31,78 @@
         "hint": "E.g.: Uninhabitable;Partially habitable;Fully habitable"
       },
       "listeEspeces": {
-        "name": "List of secondary species",
-        "hint": "Separated by semicolons"
+        "name": "Secondary species list",
+        "hint": "Semicolon-separated list"
       },
       "listeAffiliations": {
         "name": "Possible political affiliations",
-        "hint": "Separated by semicolons"
+        "hint": "Semicolon-separated list"
       },
       "listeTypesLieux": {
-        "name": "Types of locations",
-        "hint": "List of types (e.g. City, Military base...) separated by semicolons"
+        "name": "Types of places",
+        "hint": "List of place types (e.g.: City, Military base...) separated by semicolons"
       },
       "listeTaillesLieux": {
-        "name": "Location sizes",
-        "hint": "List of sizes (e.g. Small, Medium...) separated by semicolons"
+        "name": "Place sizes",
+        "hint": "List of sizes (e.g.: Small, Medium...) separated by semicolons"
       },
       "listeGouvernances": {
-        "name": "Types of governance",
-        "hint": "List of governance types (e.g. Local council...) separated by semicolons"
+        "name": "Governance types",
+        "hint": "List of governance types (e.g.: Local council...) separated by semicolons"
       },
       "listeSituationsGeo": {
-        "name": "Geographical situations",
+        "name": "Geographic situations",
         "hint": "List of terrain or environment types separated by semicolons"
       },
       "listeActivites": {
-        "name": "Main activities of locations",
-        "hint": "List of possible activities, separated by semicolons"
+        "name": "Main activities of places",
+        "hint": "List of possible activities for places, separated by semicolons"
       },
       "listeInfrastructures": {
         "name": "Available infrastructures",
-        "hint": "List separated by semicolons"
+        "hint": "Semicolon-separated list"
+      },
+      "reset": {
+        "name": "Reset settings",
+        "label": "▶ Reset now",
+        "hint": "Reload all lists according to the active language.",
+        "confirm": "✅ NPC2Place settings reset according to the active language."
       }
     },
 
-    "listeTypesPlaneteDefault": "Terrestrial;Gaseous;Oceanic;Arctic;Volcanic;Biotechnological",
+    "listeTypesPlaneteDefault": "Terrestrial;Gas giant;Oceanic;Arctic;Volcanic;Biotechnological",
     "listeHabitabilitesDefault": "Uninhabitable;Partially habitable;Fully habitable",
     "listeEspecesDefault": "Elothians;Tymbri;Cosmopolites;Sarians;Oegans;Telkines;Arcturians;Synthetics",
     "listeAffiliationsDefault": "Galactic Union;Coalition of Non-Aligned Worlds;Cosmic Brotherhood;Private Company;Independent",
-    "listeTypesLieuxDefault": "City;Military base;Research center;Mining outpost;Climate station;Diplomatic zone;Temple;University;Spaceport;Historical site;Colony;Secret base;Refurbished wreck;Agricultural dome;Nomadic camp;Cryo-complex;Medical center;Prison;Orbital platform;Commercial district;Station",
+    "listeTypesLieuxDefault": "City;Military base;Research center;Mining outpost;Climate station;Diplomatic zone;Temple;University;Spaceport;Historical site;Colony;Secret base;Rebuilt wreck;Agricultural dome;Nomad camp;Cryo-complex;Medical center;Prison;Orbital platform;Commercial district;Station",
     "listeTaillesLieuxDefault": "Small;Medium;Large;Metropolis",
-    "listeGouvernancesDefault": "Local council;Military authority;Artificial intelligence;Central government;Native tribe;Private company;Single ruler;Democratic system;Religious organization;None",
-    "listeSituationsGeoDefault": "Commercial;Military;Agricultural;Scientific;Religious;Mining;Educational;Industrial;Cultural;Political;Touristic;Residential;Technological;Medical;Logistical;Artistic;Diplomatic;Space;Ecological;Civilian",
-    "listeActivitesDefault": "Commercial;Military;Agricultural;Scientific;Religious;Mining;Educational;Industrial;Cultural;Political;Touristic;Residential;Technological;Medical;Logistical;Artistic;Diplomatic;Space;Ecological;Civilian",
+    "listeGouvernancesDefault": "Local council;Military authority;Artificial intelligence;Central government;Native tribe;Private company;Single leader;Democratic system;Religious organization;None",
+    "listeSituationsGeoDefault": "Commercial;Military;Agricultural;Scientific;Religious;Mining;Educational;Industrial;Cultural;Political;Touristic;Residential;Technological;Medical;Logistical;Artistic;Diplomatic;Space-based;Ecological;Civil",
+    "listeActivitesDefault": "Commercial;Military;Agricultural;Scientific;Religious;Mining;Educational;Industrial;Cultural;Political;Touristic;Residential;Technological;Medical;Logistical;Artistic;Diplomatic;Space-based;Ecological;Civil",
     "listeInfrastructuresDefault": "Spaceport;Control tower;Laboratory;Agricultural dome;Medical station;Communication center;Hangar;Bunker;Solar panels",
 
     "variationTemperature": {
       "Stable": "Stable",
       "Modérée": "Moderate",
-      "Forte": "High",
+      "Forte": "Strong",
       "Extrême": "Extreme"
     },
 
     "respirabilite": {
       "Respirable": "Breathable",
-      "Faiblement respirable": "Low-breathable",
-      "Non respirable": "Non-breathable"
+      "Faiblement respirable": "Slightly breathable",
+      "Non respirable": "Not breathable"
     },
 
     "ressources": {
-      "header": "Exploitable resources",
-      "dropHint": "Drop a resource (consumable or miscellaneous item) here to add it to this planet",
+      "header": "Available Resources",
+      "dropHint": "Drop a resource (consumable or loot) here to add it to this planet",
       "open": "Open",
       "remove": "Remove"
     },
 
     "lieux": {
-      "header": "Linked important locations",
+      "header": "Linked Important Places",
       "dropHint": "Drop an NPC here to link it to this planet",
       "open": "Open",
       "remove": "Remove"
@@ -104,7 +110,7 @@
 
     "planet": {
       "namePlaceholder": "Planet name",
-      "generalHeader": "General characteristics",
+      "generalHeader": "General Characteristics",
       "type": "Planet type",
       "habitabilite": "Habitability",
       "affiliation": "Political affiliation",
@@ -114,19 +120,19 @@
       "dropSpecies": "Drop an NPC sheet here to add it as a dominant species",
       "secondarySpeciesHeader": "Secondary species",
       "secondarySpeciesLabel": "Present secondary species",
-      "linkedPlaces": "Linked important locations",
+      "linkedPlaces": "Linked important places",
       "dropLieu": "Drop an NPC here to link it to this planet",
-      "dropRessource": "Drop a resource (consumable or miscellaneous item) here to add it to this planet",
+      "dropRessource": "Drop a resource (consumable or loot) here to add it to this planet",
       "description": "Description"
     },
 
     "place": {
-      "namePlaceholder": "Location name",
+      "namePlaceholder": "Place name",
       "informations": {
-        "type": "Location type",
+        "type": "Type of place",
         "taille": "Size",
         "gouvernance": "Governance",
-        "gestion": "Geographical situation",
+        "gestion": "Geographic situation",
         "affiliation": "Affiliation",
         "activite": "Main activity"
       },
@@ -146,11 +152,11 @@
       "especes": "Species",
       "infrastructures": "Infrastructures",
       "ressources": "Resources",
-      "lieux": "Locations",
+      "lieux": "Places",
       "description": "Description"
     },
 
     "warnSwadeNotFound": "npc2place | SwadeNPCSheet not found.",
-    "registerLog": "npc2place | Custom sheets registered (Planet + Location), style:"
+    "registerLog": "npc2place | Custom sheets registered (Planet + Place), style:"
   }
 }

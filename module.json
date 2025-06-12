@@ -1,7 +1,7 @@
 {
   "id": "npc2place",
   "name": "npc2place",
-  "title": "NPC to Place",
+  "title": "SWADE - NPC to Place",
   "description": "Permet de transformer un PNJ (type npc) en fiche de planète ou de lieu dans l’univers Spatiopolis, avec style visuel sélectionnable. Compatible avec SWADE.",
   "version": "1.0.0",
   "author": "Davy_mj",
