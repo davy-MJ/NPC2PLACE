@@ -8,10 +8,10 @@
   "type": "module",
   "esmodules": ["scripts/main.js"],
   "languages": [
-    { "lang": "fr", "name": "Français", "path": "lang/fr.json", "flags": {} },
-    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {} },
-    { "lang": "es", "name": "Español", "path": "lang/es.json", "flags": {} },
-    { "lang": "de", "name": "Deutsch", "path": "lang/de.json", "flags": {} }
+    { "lang": "fr", "name": "Français", "path": "lang/fr.json"},
+    { "lang": "en", "name": "English", "path": "lang/en.json"},
+    { "lang": "es", "name": "Español", "path": "lang/es.json"},
+    { "lang": "de", "name": "Deutsch", "path": "lang/de.json"}
   ],
   "url": "https://www.stream-adventure.fr/npc2place/",
   "readme": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/refs/heads/main/readme.en.md",
