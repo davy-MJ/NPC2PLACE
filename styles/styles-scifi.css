@@ -1,0 +1,334 @@
+/* ========================
+   STYLE SCI-FI – SPATIOLIS
+   ======================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+.app.sheet.actor.spatiopolis {
+  font-family: 'Orbitron', sans-serif;
+  background: url("https://www.stream-adventure.fr/npc2place/sci_bg.png") repeat;
+  color: #e0e0e0;
+  padding: 12px;
+  box-shadow: 0 0 15px #000;
+}
+
+/* ========================
+   HEADER
+   ======================== */
+
+.app.sheet.actor.spatiopolis .sheet-header {
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+.app.sheet.actor.spatiopolis .charname input {
+  font-size: 1.3em;
+  width: 98%;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  padding: 4px;
+  text-shadow: 0 0 3px #3aaaff;
+}
+
+/* ========================
+   ONGLET & NAVIGATION
+   ======================== */
+
+.app.sheet.actor.spatiopolis .sheet-tabs {
+  display: flex;
+  gap: 0.75em;
+  margin-top: -1 !important;
+  border-bottom: 1px solid #3aaaff;
+}
+
+.app.sheet.actor.spatiopolis .sheet-tabs .item {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 6px 6px 0 0;
+  background: #0f1923;
+  border-bottom: none;
+  color: #3aaaff;
+  font-weight: bold;
+  text-shadow: 0 0 3px #3aaaff;
+  font-size: 0.95em;
+}
+
+.app.sheet.actor.spatiopolis .sheet-tabs .item.active {
+  background: #1b2838;
+  color: #ffffff;
+  border-bottom: none;
+}
+
+/* ========================
+   CONTENU DES ONGLETS
+   ======================== */
+
+.app.sheet.actor.spatiopolis .tab {
+  display: none;
+  padding: 10px;
+}
+
+.app.sheet.actor.spatiopolis .tab.active {
+  display: block;
+}
+
+/* ========================
+   GRILLES & STRUCTURE
+   ======================== */
+
+.app.sheet.actor.spatiopolis .grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.app.sheet.actor.spatiopolis .grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.app.sheet.actor.spatiopolis .full-span {
+  grid-column: span 3;
+}
+
+/* ========================
+   CHAMPS & LIBELLÉS
+   ======================== */
+
+.app.sheet.actor.spatiopolis .field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.app.sheet.actor.spatiopolis .field-group label {
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-bottom: 6px;
+  color: #a0cfff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================
+   INPUTS & SELECTS
+   ======================== */
+
+.app.sheet.actor.spatiopolis input[type="text"],
+.app.sheet.actor.spatiopolis input[type="number"],
+.app.sheet.actor.spatiopolis select {
+  padding: 6px 8px;
+  border: 1px solid #3aaaff;
+  border-radius: 4px;
+  background: #0f1923;
+  color: #e0e0e0;
+  font-size: 0.95em;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='cyan' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+  padding-right: 30px;
+  height: 60px;
+}
+
+.app.sheet.actor.spatiopolis select option {
+  background-color: #0f1923;
+  color: #e0e0e0;
+}
+
+/* ========================
+   TITRES SECTIONS
+   ======================== */
+
+.app.sheet.actor.spatiopolis h2,
+.app.sheet.actor.spatiopolis h3 {
+  color: #3aaaff;
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  text-shadow: 0 0 4px #3aaaff;
+  padding-bottom: 4px;
+}
+
+.app.sheet.actor.spatiopolis legend,
+.app.sheet.actor.spatiopolis .section-header {
+  color: #3aaaff;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+/* ========================
+   ÉDITEUR ENRICHI
+   ======================== */
+
+.app.sheet.actor.spatiopolis .editor-container {
+  border: 1px solid #3aaaff;
+  padding: 10px;
+  background: #ffffff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.app.sheet.actor.spatiopolis .editor-container .editor,
+.app.sheet.actor.spatiopolis .editor-content {
+  background: transparent !important;
+  color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95em;
+  padding: 8px;
+  min-height: 160px;
+  border: none;
+}
+
+/* ========================
+   LISTES D'ÉLÉMENTS
+   ======================== */
+
+.app.sheet.actor.spatiopolis .items-list {
+  margin-top: 1rem;
+}
+
+.app.sheet.actor.spatiopolis .item {
+  background: #1b2838;
+  border: 1px solid #3aaaff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 6px;
+}
+
+.app.sheet.actor.spatiopolis .item img {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.app.sheet.actor.spatiopolis .item-name {
+  font-weight: bold;
+  flex-grow: 1;
+  color: #bde0ff;
+}
+
+.app.sheet.actor.spatiopolis .item-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.app.sheet.actor.spatiopolis .item-control i {
+  color: #3aaaff;
+  font-size: 1.1em;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+.app.sheet.actor.spatiopolis .item-control i:hover {
+  color: #66c2ff;
+  transform: scale(1.1);
+}
+
+/* ========================
+   CHECKBOX ESPÈCES
+   ======================== */
+
+.app.sheet.actor.spatiopolis fieldset {
+  border: none;
+  padding: 0;
+}
+
+.app.sheet.actor.spatiopolis #species-secondary label {
+  display: inline-block;
+  margin: 4px 10px 4px 0;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #d0e7ff;
+}
+
+/* ========================
+   ZONE DE DROP
+   ======================== */
+
+.app.sheet.actor.spatiopolis .drop-area,
+.app.sheet.actor.spatiopolis .drop-villes {
+  border: 2px dashed #3aaaff;
+  padding: 1em;
+  text-align: center;
+  background: rgba(30, 45, 60, 0.8);
+  margin-top: 1em;
+  border-radius: 6px;
+  color: #a0cfff;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.app.sheet.actor.spatiopolis .drop-area.dragover,
+.app.sheet.actor.spatiopolis .drop-villes.dragover {
+  background-color: rgba(58, 170, 255, 0.1);
+  border-color: #3aaaff;
+}
+
+/* ========================
+   BOUTON AJOUT
+   ======================== */
+
+.app.sheet.actor.spatiopolis .add-infrastructure,
+.app.sheet.actor.spatiopolis .add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1923;
+  color: #3aaaff;
+  border: 1px solid #3aaaff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.95em;
+  height: 40px;
+  min-width: 100px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0 0 2px #3aaaff;
+}
+
+.app.sheet.actor.spatiopolis .add-infrastructure:hover,
+.app.sheet.actor.spatiopolis .add-button:hover {
+  background: #1b2838;
+  border-color: #66c2ff;
+  color: #66c2ff;
+}
+
+/* ========================
+   AUTRES
+   ======================== */
+
+.app.sheet.actor.spatiopolis hr {
+  margin: 1.5rem 0;
+  border: none;
+}
+
+.app.sheet.actor.spatiopolis .window-content {
+  background: transparent !important;
+}
+
+.app.sheet.actor.spatiopolis .window-content > .sheet-header {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.app.sheet.actor.spatiopolis .sheet-tabs {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}

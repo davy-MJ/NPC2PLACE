@@ -1,0 +1,228 @@
+/* ========================
+   STYLES FICHES SPATIOLIS
+   ======================== */
+
+.app.sheet.actor.spatiopolis {
+  font-family: var(--font-primary);
+  background: #f7f5f0;
+  padding: 10px;
+}
+
+/* ========================
+   HEADER
+   ======================== */
+
+.app.sheet.actor.spatiopolis .sheet-header {
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.app.sheet.actor.spatiopolis .charname input {
+  font-size: 1.5em;
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #999;
+}
+
+/* ========================
+   GRILLES ET GROUPES
+   ======================== */
+
+.app.sheet.actor.spatiopolis .grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.app.sheet.actor.spatiopolis .grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.app.sheet.actor.spatiopolis .full-span {
+  grid-column: span 3;
+}
+
+.app.sheet.actor.spatiopolis .field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.app.sheet.actor.spatiopolis .field-group label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+/* ========================
+   INPUTS & SELECTS
+   ======================== */
+
+.app.sheet.actor.spatiopolis input[type="text"],
+.app.sheet.actor.spatiopolis input[type="number"],
+.app.sheet.actor.spatiopolis select {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f9f9f9;
+  width: 100%;
+}
+
+/* ========================
+   ÉDITEUR ENRICHI
+   ======================== */
+
+.app.sheet.actor.spatiopolis .editor-container {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.app.sheet.actor.spatiopolis .editor-container .editor,
+.app.sheet.actor.spatiopolis .editor-container .editor-content {
+  background: #fff !important;
+  color: #000;
+  min-height: 160px;
+  padding: 6px;
+  overflow: auto;
+}
+
+.app.sheet.actor.spatiopolis .editor-content {
+  background: #fff;
+  color: #000;
+  min-height: 160px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* ========================
+   LISTES D'ÉLÉMENTS
+   ======================== */
+
+.app.sheet.actor.spatiopolis .items-list {
+  margin-top: 0.5rem;
+}
+
+.app.sheet.actor.spatiopolis .item {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 5px;
+}
+
+.app.sheet.actor.spatiopolis .item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.app.sheet.actor.spatiopolis .item-name {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.app.sheet.actor.spatiopolis .item-control {
+  color: #555;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* ========================
+   CHECKBOX ESPÈCES
+   ======================== */
+
+.app.sheet.actor.spatiopolis fieldset {
+  border: none;
+  padding: 0;
+}
+
+.app.sheet.actor.spatiopolis #species-secondary label,
+.app.sheet.actor.spatiopolis .species-secondary-label {
+  display: block;
+  margin: 2px 0;
+  font-weight: normal;
+}
+
+/* ========================
+   ZONE DE DROP
+   ======================== */
+
+.app.sheet.actor.spatiopolis .drop-area,
+.app.sheet.actor.spatiopolis .drop-villes {
+  border: 2px dashed #888;
+  padding: 1em;
+  text-align: center;
+  background: #fdfdfd;
+  margin-top: 1em;
+  border-radius: 4px;
+  color: #444;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.app.sheet.actor.spatiopolis .drop-area.dragover,
+.app.sheet.actor.spatiopolis .drop-villes.dragover {
+  background-color: rgba(100, 149, 237, 0.1); /* Cornflower Blue tint */
+  border-color: #6495ED;
+}
+
+/* ========================
+   ONGLET & NAVIGATION
+   ======================== */
+
+.app.sheet.actor.spatiopolis .sheet-tabs {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.app.sheet.actor.spatiopolis .sheet-tabs .item {
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+  border-radius: 5px 5px 0 0;
+  background: #eee;
+}
+
+.app.sheet.actor.spatiopolis .sheet-tabs .item.active {
+  background: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.app.sheet.actor.spatiopolis .tab {
+  display: none;
+}
+
+.app.sheet.actor.spatiopolis .tab.active {
+  display: block;
+}
+
+/* ========================
+   SÉPARATEURS
+   ======================== */
+
+.app.sheet.actor.spatiopolis hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.app.sheet.actor.spatiopolis .editor-content {
+  color: #000 !important;
+}

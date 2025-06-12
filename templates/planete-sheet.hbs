@@ -1,0 +1,154 @@
+<form class="planete-sheet" autocomplete="off">
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+    <h1 class="charname">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'npc2place.planet.namePlaceholder'}}" />
+    </h1>
+  </header>
+</br>
+  <!-- Onglets -->
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="infos">{{localize "npc2place.tab.infos"}}</a>
+    <a class="item" data-tab="especes">{{localize "npc2place.tab.especes"}}</a>
+    <a class="item" data-tab="lieux">{{localize "npc2place.tab.lieux"}}</a>
+    <a class="item" data-tab="ressources">{{localize "npc2place.tab.ressources"}}</a>
+    <a class="item" data-tab="description">{{localize "npc2place.tab.description"}}</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Onglet Infos -->
+    <div class="tab" data-tab="infos">
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.planet.generalHeader"}}</header>
+        <div class="grid grid-3col">
+          <div class="field-group">
+            <label>{{localize "npc2place.planet.type"}}</label>
+            <select name="system.details.archetype">
+              {{#each planetTypes as |option|}}
+                <option value="{{option}}" {{#if (eq option ../actor.system.details.archetype)}}selected{{/if}}>{{option}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="field-group">
+            <label>{{localize "npc2place.planet.habitabilite"}}</label>
+            <select name="system.details.notes">
+              {{#each habitabilites as |option|}}
+                <option value="{{option}}" {{#if (eq option ../actor.system.details.notes)}}selected{{/if}}>{{option}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="field-group">
+            <label>{{localize "npc2place.planet.affiliation"}}</label>
+            <select name="system.details.biography.value">
+              {{#each affiliations as |option|}}
+                <option value="{{option}}" {{#if (eq option ../actor.system.details.biography.value)}}selected{{/if}}>{{option}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-2col">
+          <div class="field-group">
+            <label>{{localize "npc2place.planet.variationTemperature"}}</label>
+            <select name="flags.npc2place.variationTemperature">
+              {{#each variationsTemperature as |option|}}
+                <option value="{{option}}" {{#if (eq option ../variationTemperature)}}selected{{/if}}>{{localize (concat "npc2place.variationTemperature." option)}}</option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="field-group">
+            <label>{{localize "npc2place.planet.respirabilite"}}</label>
+            <select name="flags.npc2place.respirabilite">
+              {{#each respirabilites as |option|}}
+                <option value="{{option}}" {{#if (eq option ../respirabilite)}}selected{{/if}}>{{localize (concat "npc2place.respirabilite." option)}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet Espèces -->
+    <div class="tab" data-tab="especes">
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.planet.mondeMere"}}</header>
+        <div class="items-list">
+          {{#each ancestries}}
+            <div class="item" data-item-id="{{this._id}}">
+              <img src="{{this.img}}" width="32" height="32" />
+              <span class="item-name">{{this.name}}</span>
+              <a class="item-control item-edit" title="{{localize 'npc2place.edit'}}"><i class="fas fa-edit"></i></a>
+              <a class="item-control item-delete" title="{{localize 'npc2place.delete'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          {{/each}}
+          <div class="drop-area" data-drop-target="species">{{localize "npc2place.planet.dropSpecies"}}</div>
+        </div>
+      </div>
+</br></br>
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.planet.secondarySpeciesHeader"}}</header>
+        <div class="field-group">
+          <label for="species-secondary">{{localize "npc2place.planet.secondarySpeciesLabel"}}</label>
+          <fieldset id="species-secondary">
+            {{#each secondarySpeciesList}}
+              <label>
+                <input type="checkbox" class="species-secondary" value="{{this}}" {{#if (includes ../selectedSecondarySpecies this)}}checked{{/if}}>
+                {{this}}
+              </label>
+            {{/each}}
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet Lieux -->
+    <div class="tab" data-tab="lieux">
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.planet.linkedPlaces"}}</header>
+        <div class="items-list">
+          {{#each lieuxLiees}}
+            <div class="item">
+              <img src="{{this.img}}" width="32" height="32" />
+              <span class="item-name">{{this.name}}</span>
+              <a class="item-control open-linked-ville" data-uuid="{{this.uuid}}" title="{{localize 'npc2place.open'}}"><i class="fas fa-eye"></i></a>
+              <a class="item-control remove-linked-ville" data-uuid="{{this.uuid}}" title="{{localize 'npc2place.remove'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          {{/each}}
+          <div class="drop-area drop-villes">{{localize "npc2place.planet.dropLieu"}}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet Ressources -->
+    <div class="tab" data-tab="ressources">
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.ressources.header"}}</header>
+        <div class="items-list">
+          {{#each ressources}}
+            <div class="item" data-uuid="{{this.uuid}}">
+              <img src="{{this.img}}" width="32" height="32" />
+              <span class="item-name">{{this.name}}</span>
+              <a class="item-control open-ressource" title="{{localize 'npc2place.open'}}"><i class="fas fa-eye"></i></a>
+              <a class="item-control remove-ressource" title="{{localize 'npc2place.remove'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          {{/each}}
+          <div class="drop-area drop-ressources">{{localize "npc2place.planet.dropRessource"}}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet Description -->
+    <div class="tab" data-tab="description">
+      <div class="section">
+        <header class="section-header">{{localize "npc2place.planet.description"}}</header>
+        <div class="editor-container">
+          {{#if editable}}
+            {{editor notes target="flags.npc2place.notes" button=true owner=true editable=true engine="prosemirror"}}
+          {{else}}
+            <div class="editor-content">{{{notes}}}</div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

@@ -1,0 +1,137 @@
+<form class="place-sheet" autocomplete="off">
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+    <h1 class="charname">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'npc2place.place.namePlaceholder'}}" />
+    </h1>
+  </header>
+
+  <br><br>
+
+  <!-- Onglets -->
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="infos">{{localize 'npc2place.tab.infos'}}</a>
+    <a class="item" data-tab="especes">{{localize 'npc2place.tab.especes'}}</a>
+    <a class="item" data-tab="infrastructures">{{localize 'npc2place.tab.infrastructures'}}</a>
+    <a class="item" data-tab="description">{{localize 'npc2place.tab.description'}}</a>
+  </nav>
+
+  <!-- Contenu des onglets -->
+  <section class="sheet-body">
+
+    <!-- Onglet : Informations -->
+    <div class="tab" data-tab="infos">
+      <div class="grid grid-2col">
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.type'}}</label>
+          <select name="flags.npc2place.population">
+            {{#each typesLieu}}
+              <option value="{{this}}" {{#ifEquals ../population this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.taille'}}</label>
+          <select name="flags.npc2place.taille">
+            {{#each tailles}}
+              <option value="{{this}}" {{#ifEquals ../taille this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.gouvernance'}}</label>
+          <select name="flags.npc2place.gouvernance">
+            {{#each gouvernances}}
+              <option value="{{this}}" {{#ifEquals ../gouvernance this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.gestion'}}</label>
+          <select name="flags.npc2place.gestion">
+            {{#each situationsGeo}}
+              <option value="{{this}}" {{#ifEquals ../gestion this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.affiliation'}}</label>
+          <select name="flags.npc2place.affiliation">
+            {{#each affiliations}}
+              <option value="{{this}}" {{#ifEquals ../affiliation this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>{{localize 'npc2place.place.informations.activite'}}</label>
+          <select name="flags.npc2place.activite">
+            {{#each activites}}
+              <option value="{{this}}" {{#ifEquals ../activite this}}selected{{/ifEquals}}>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet : Espèces -->
+    <div class="tab" data-tab="especes">
+      <div class="field-group">
+        <label>{{localize 'npc2place.place.especes.label'}}</label>
+        <fieldset id="species-secondary">
+          {{#each secondarySpeciesList}}
+            <label>
+              <input type="checkbox" class="species-secondary" value="{{this}}" {{#if (includes ../selectedSecondarySpecies this)}}checked{{/if}}>
+              {{this}}
+            </label>
+          {{/each}}
+        </fieldset>
+      </div>
+    </div>
+
+    <!-- Onglet : Infrastructures -->
+    <div class="tab" data-tab="infrastructures">
+      <div class="field-group">
+        <label for="infrastructure-select">{{localize 'npc2place.place.infrastructures.addLabel'}}</label>
+        <div style="display: flex; gap: 0.5rem;">
+          <select id="infrastructure-select" name="infrastructure-select">
+            {{#each infrastructuresList}}
+              <option value="{{this}}">{{this}}</option>
+            {{/each}}
+          </select>
+          <button type="button" class="add-infrastructure"><i class="fas fa-plus"></i> {{localize 'npc2place.place.infrastructures.addButton'}}</button>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="section">
+        <header class="section-header">{{localize 'npc2place.place.infrastructures.header'}}</header>
+        <div class="items-list infrastructure-list">
+          {{#each infrastructures}}
+            <div class="item" data-name="{{this}}">
+              <span class="item-name">{{this}}</span>
+              <a class="item-control remove-infrastructure" title="{{localize 'npc2place.place.infrastructures.remove'}}"><i class="fas fa-trash"></i></a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Onglet : Description -->
+    <div class="tab" data-tab="description">
+      <div class="editor-container">
+        {{#if editable}}
+          {{editor notes target="flags.npc2place.notes" button=true owner=true editable=true engine="prosemirror"}}
+        {{else}}
+          <div class="editor-content">{{{notes}}}</div>
+        {{/if}}
+      </div>
+    </div>
+
+  </section>
+</form>

@@ -1,0 +1,156 @@
+{
+  "npc2place": {
+    "themeLabel": "Tema visual de las fichas",
+    "themeHint": "Define el estilo gráfico aplicado a las fichas (sci-fi o medieval).",
+    "themeSciFi": "Ciencia ficción",
+    "themeMedieval": "Medieval",
+    "themeChanged": "Tema cambiado. Recargando la interfaz...",
+
+    "sheet": {
+      "planete": "NPC to Place – Planeta",
+      "place": "NPC to Place – Lugar"
+    },
+
+    "settings": {
+      "separatorTheme": "🎨 — Tema visual —",
+      "separatorPlanetes": "🌍 — Configuración de Planetas —",
+      "separatorLieux": "🏙️ — Configuración de Lugares —",
+
+      "styleActif": {
+        "name": "Tema visual de las fichas",
+        "hint": "Elige un estilo de visualización para las fichas de Planeta y Lugar.",
+        "sci-fi": "Estilo futurista",
+        "medieval": "Estilo medieval"
+      },
+      "listeTypesPlanete": {
+        "name": "Tipos de planeta disponibles",
+        "hint": "Lista separada por punto y coma"
+      },
+      "listeHabitabilites": {
+        "name": "Niveles de habitabilidad",
+        "hint": "Ej: Inhabitable;Parcialmente habitable;Totalmente habitable"
+      },
+      "listeEspeces": {
+        "name": "Lista de especies secundarias",
+        "hint": "Separadas por punto y coma"
+      },
+      "listeAffiliations": {
+        "name": "Afiliaciones políticas posibles",
+        "hint": "Separadas por punto y coma"
+      },
+      "listeTypesLieux": {
+        "name": "Tipos de lugares",
+        "hint": "Lista de tipos (ej: Ciudad, Base militar...) separada por punto y coma"
+      },
+      "listeTaillesLieux": {
+        "name": "Tamaños de lugares",
+        "hint": "Lista de tamaños (ej: Pequeño, Mediano...) separados por punto y coma"
+      },
+      "listeGouvernances": {
+        "name": "Tipos de gobierno",
+        "hint": "Lista de tipos de gobierno (ej: Consejo local...) separados por punto y coma"
+      },
+      "listeSituationsGeo": {
+        "name": "Situaciones geográficas",
+        "hint": "Lista de tipos de entorno o terreno separados por punto y coma"
+      },
+      "listeActivites": {
+        "name": "Actividades principales de los lugares",
+        "hint": "Lista de actividades posibles, separadas por punto y coma"
+      },
+      "listeInfrastructures": {
+        "name": "Infraestructuras disponibles",
+        "hint": "Lista separada por punto y coma"
+      }
+    },
+
+    "listeTypesPlaneteDefault": "Telúrico;Gaseoso;Oceánico;Ártico;Volcánico;Biotecnológico",
+    "listeHabitabilitesDefault": "Inhabitable;Parcialmente habitable;Totalmente habitable",
+    "listeEspecesDefault": "Elothians;Tymbri;Cosmopolitas;Sarians;Oegans;Telkines;Arcturianos;Sintéticos",
+    "listeAffiliationsDefault": "Unión Galáctica;Coalición de Mundos No Alineados;Hermandad Cósmica;Empresa privada;Independiente",
+    "listeTypesLieuxDefault": "Ciudad;Base militar;Centro de investigación;Puesto minero;Estación climática;Zona diplomática;Templo;Universidad;Puerto espacial;Sitio histórico;Colonia;Base secreta;Nave reaprovechada;Domo agrícola;Campamento nómada;Complejo criogénico;Centro médico;Prisión;Plataforma orbital;Distrito comercial;Estación",
+    "listeTaillesLieuxDefault": "Pequeño;Mediano;Grande;Metrópolis",
+    "listeGouvernancesDefault": "Consejo local;Autoridad militar;Inteligencia artificial;Gobierno central;Tribu nativa;Empresa privada;Gobernante único;Sistema democrático;Organización religiosa;Ninguno",
+    "listeSituationsGeoDefault": "Comercial;Militar;Agrícola;Científica;Religiosa;Minera;Educativa;Industrial;Cultural;Política;Turística;Residencial;Tecnológica;Médica;Logística;Artística;Diplomática;Espacial;Ecológica;Civil",
+    "listeActivitesDefault": "Comercial;Militar;Agrícola;Científica;Religiosa;Minera;Educativa;Industrial;Cultural;Política;Turística;Residencial;Tecnológica;Médica;Logística;Artística;Diplomática;Espacial;Ecológica;Civil",
+    "listeInfrastructuresDefault": "Puerto espacial;Torre de control;Laboratorio;Domo agrícola;Estación médica;Centro de comunicaciones;Hangar;Búnker;Paneles solares",
+
+    "variationTemperature": {
+      "Stable": "Estable",
+      "Modérée": "Moderada",
+      "Forte": "Alta",
+      "Extrême": "Extrema"
+    },
+
+    "respirabilite": {
+      "Respirable": "Respirable",
+      "Faiblement respirable": "Poco respirable",
+      "Non respirable": "No respirable"
+    },
+
+    "ressources": {
+      "header": "Recursos explotables",
+      "dropHint": "Suelta aquí un recurso (objeto consumible o diverso) para añadirlo a este planeta",
+      "open": "Abrir",
+      "remove": "Eliminar"
+    },
+
+    "lieux": {
+      "header": "Lugares importantes vinculados",
+      "dropHint": "Suelta aquí un PNJ para vincularlo a este planeta",
+      "open": "Abrir",
+      "remove": "Eliminar"
+    },
+
+    "planet": {
+      "namePlaceholder": "Nombre del planeta",
+      "generalHeader": "Características generales",
+      "type": "Tipo de planeta",
+      "habitabilite": "Habitabilidad",
+      "affiliation": "Afiliación política",
+      "variationTemperature": "Variación de temperatura",
+      "respirabilite": "Respirabilidad",
+      "mondeMere": "Mundo natal de:",
+      "dropSpecies": "Suelta aquí una ficha de PNJ para añadirla como especie dominante",
+      "secondarySpeciesHeader": "Especies secundarias",
+      "secondarySpeciesLabel": "Especies secundarias presentes",
+      "linkedPlaces": "Lugares importantes vinculados",
+      "dropLieu": "Suelta aquí un PNJ para vincularlo a este planeta",
+      "dropRessource": "Suelta aquí un recurso (objeto consumible o diverso) para añadirlo a este planeta",
+      "description": "Descripción"
+    },
+
+    "place": {
+      "namePlaceholder": "Nombre del lugar",
+      "informations": {
+        "type": "Tipo de lugar",
+        "taille": "Tamaño",
+        "gouvernance": "Gobierno",
+        "gestion": "Situación geográfica",
+        "affiliation": "Afiliación",
+        "activite": "Actividad principal"
+      },
+      "especes": {
+        "label": "Especies secundarias presentes"
+      },
+      "infrastructures": {
+        "addLabel": "Añadir infraestructura",
+        "addButton": "Añadir",
+        "header": "Infraestructuras presentes",
+        "remove": "Eliminar"
+      }
+    },
+
+    "tab": {
+      "infos": "Información",
+      "especes": "Especies",
+      "infrastructures": "Infraestructuras",
+      "ressources": "Recursos",
+      "lieux": "Lugares",
+      "description": "Descripción"
+    },
+
+    "warnSwadeNotFound": "npc2place | SwadeNPCSheet no encontrado.",
+    "registerLog": "npc2place | Fichas personalizadas registradas (Planeta + Lugar), estilo:"
+  }
+}
