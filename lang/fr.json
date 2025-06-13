@@ -77,14 +77,13 @@
     "listeTypesLieuxDefault": "Ville;Base militaire;Centre de recherche;Avant-poste minier;Station climatique;Zone diplomatique;Temple;Université;Port spatial;Lieu historique;Colonie;Base secrète;Épave réaménagée;Dôme agricole;Camp nomade;Cryo-complexe;Centre médical;Prison;Plateforme orbitale;Quartier commercial;Station",
     "listeTaillesLieuxDefault": "Petite;Moyenne;Grande;Métropole",
     "listeGouvernancesDefault": "Conseil local;Autorité militaire;Intelligence artificielle;Gouvernement central;Tribu native;Compagnie privée;Dirigeant unique;Système démocratique;Organisation religieuse;Aucune",
-    "listeSituationsGeoDefault": "Commerciale;Militaire;Agricole;Scientifique;Religieuse;Minière;Éducative;Industrielle;Culturelle;Politique;Touristique;Résidentielle;Technologique;Médicale;Logistique;Artistique;Diplomatique;Spatiale;Écologique;Civile",
+    "listeSituationsGeoDefault": "falaise ; forêt ; désert ; vallée ; gouffre ; volcan ; archipel ; frontière ; ruines ; grotte ; orbite ; astéroïde ; lune ; nuage ; faille ; vaisseau ; trou ; anneau ; débris ; nébuleuse ; caverne ; abysses ; récif ; dôme ; plateforme ; gratte-ciel ; ballon ; tunnel ; crypte ; abîme",
     "listeActivitesDefault": "Commerciale;Militaire;Agricole;Scientifique;Religieuse;Minière;Éducative;Industrielle;Culturelle;Politique;Touristique;Résidentielle;Technologique;Médicale;Logistique;Artistique;Diplomatique;Spatiale;Écologique;Civile",
-    "listeInfrastructuresDefault": "Spatioport;Tour de contrôle;Laboratoire;Dôme agricole;Station médicale;Centre de communication;Hangar;Bunker;Panneaux solaires",
-
+    "listeInfrastructuresDefault": "douane ;administration ; bureau ; ambassade ; tribunal ; banque ; assurance ; communication ; maintenance ; ravitaillement ; hangar ; entrepôt ; marché ; bourse ; boutique ; terminal ; cantina ; bar ; hôtel ; casino ; théâtre ; laboratoire ; observatoire ; serre ; prison ; garnison ; tour ; résidence ; crypte ; ruine ; usine ; fonderie ; raffinerie ; chantier ; mine ; extracteur ; réacteur ; générateur ; dépôt",
     "variationTemperature": {
       "Stable": "Stable",
       "Modérée": "Modérée",
-      "Forte": "Forte",
+      "Forte": "Forte",	
       "Extrême": "Extrême"
     },
 
