@@ -19,7 +19,6 @@ Hooks.once("init", () => {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   });
 
-
   game.settings.register("npc2place", "styleActif", {
     name: game.i18n.localize("npc2place.settings.styleActif.name"),
     hint: game.i18n.localize("npc2place.settings.styleActif.hint"),
@@ -37,7 +36,6 @@ Hooks.once("init", () => {
     }
   });
 
-
   const registerSetting = (key, nameKey, hintKey, defaultKey) => {
     const defaultValue = game.i18n.has(defaultKey)
       ? game.i18n.localize(defaultKey)
@@ -52,18 +50,27 @@ Hooks.once("init", () => {
     });
   };
 
-  registerSetting("listeTypesPlanete", "npc2place.settings.listeTypesPlanete.name", "npc2place.settings.listeTypesPlanete.hint", "npc2place.listeTypesPlaneteDefault");
-  registerSetting("listeHabitabilites", "npc2place.settings.listeHabitabilites.name", "npc2place.settings.listeHabitabilites.hint", "npc2place.listeHabitabilitesDefault");
-  registerSetting("listeEspeces", "npc2place.settings.listeEspeces.name", "npc2place.settings.listeEspeces.hint", "npc2place.listeEspecesDefault");
-  registerSetting("listeAffiliations", "npc2place.settings.listeAffiliations.name", "npc2place.settings.listeAffiliations.hint", "npc2place.listeAffiliationsDefault");
+  const settingsList = [
+    ["listeTypesPlanete", "listeTypesPlanete"],
+    ["listeHabitabilites", "listeHabitabilites"],
+    ["listeEspeces", "listeEspeces"],
+    ["listeAffiliations", "listeAffiliations"],
+    ["listeTypesLieux", "listeTypesLieux"],
+    ["listeTaillesLieux", "listeTaillesLieux"],
+    ["listeGouvernances", "listeGouvernances"],
+    ["listeSituationsGeo", "listeSituationsGeo"],
+    ["listeActivites", "listeActivites"],
+    ["listeInfrastructures", "listeInfrastructures"]
+  ];
 
-
-  registerSetting("listeTypesLieux", "npc2place.settings.listeTypesLieux.name", "npc2place.settings.listeTypesLieux.hint", "npc2place.listeTypesLieuxDefault");
-  registerSetting("listeTaillesLieux", "npc2place.settings.listeTaillesLieux.name", "npc2place.settings.listeTaillesLieux.hint", "npc2place.listeTaillesLieuxDefault");
-  registerSetting("listeGouvernances", "npc2place.settings.listeGouvernances.name", "npc2place.settings.listeGouvernances.hint", "npc2place.listeGouvernancesDefault");
-  registerSetting("listeSituationsGeo", "npc2place.settings.listeSituationsGeo.name", "npc2place.settings.listeSituationsGeo.hint", "npc2place.listeSituationsGeoDefault");
-  registerSetting("listeActivites", "npc2place.settings.listeActivites.name", "npc2place.settings.listeActivites.hint", "npc2place.listeActivitesDefault");
-  registerSetting("listeInfrastructures", "npc2place.settings.listeInfrastructures.name", "npc2place.settings.listeInfrastructures.hint", "npc2place.listeInfrastructuresDefault");
+  for (let [key, base] of settingsList) {
+    registerSetting(
+      key,
+      `npc2place.settings.${base}.name`,
+      `npc2place.settings.${base}.hint`,
+      `npc2place.settings.${base}.var`
+    );
+  }
 
   // 🔄 Réinitialisation des paramètres via un menu
   game.settings.registerMenu("npc2place", "resetDefaults", {
@@ -73,13 +80,8 @@ Hooks.once("init", () => {
     icon: "fas fa-rotate",
     type: class extends FormApplication {
       async render() {
-        const keys = [
-          "listeTypesPlanete", "listeHabitabilites", "listeEspeces", "listeAffiliations",
-          "listeTypesLieux", "listeTaillesLieux", "listeGouvernances", "listeSituationsGeo",
-          "listeActivites", "listeInfrastructures"
-        ];
-        for (const key of keys) {
-          const defKey = `npc2place.${key}Default`;
+        for (const [key, base] of settingsList) {
+          const defKey = `npc2place.settings.${base}.var`;
           const value = game.i18n.localize(defKey);
           await game.settings.set("npc2place", key, value);
         }
