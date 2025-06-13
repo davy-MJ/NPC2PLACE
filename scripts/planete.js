@@ -17,13 +17,24 @@ export function createPlaneteSheet(SuperSheet) {
       const context = await super.getData(options);
       context.isPlanete = true;
 
-      context.secondarySpeciesList = game.settings.get("npc2place", "listeEspeces")?.split(";") || [];
-      context.planetTypes = game.settings.get("npc2place", "listeTypesPlanete")?.split(";") || [];
-      context.habitabilites = game.settings.get("npc2place", "listeHabitabilites")?.split(";") || [];
-      context.affiliations = game.settings.get("npc2place", "listeAffiliations")?.split(";") || [];
+      const parseSettingList = (settingKey, localizationPrefix = null) => {
+        const raw = game.settings.get("npc2place", settingKey);
+        return raw
+          .split(";")
+          .map(entry => entry.trim())
+          .filter(entry => entry.length > 0)
+          .map(key => ({
+            key,
+            label: localizationPrefix ? game.i18n.localize(`${localizationPrefix}.${key}`) : key
+          }));
+      };
 
-      context.variationsTemperature = ["Stable", "Modérée", "Forte", "Extrême"];
-      context.respirabilites = ["Respirable", "Faiblement respirable", "Non respirable"];
+      context.secondarySpeciesList = game.settings.get("npc2place", "listeEspeces")?.split(";") || [];
+      context.planetTypes = parseSettingList("listeTypesPlanete");
+      context.habitabilites = parseSettingList("listeHabitabilites");
+      context.affiliations = parseSettingList("listeAffiliations");
+      context.variationsTemperature = parseSettingList("listeVariationsTemperature", "npc2place.variationTemperature");
+      context.respirabilites = parseSettingList("listeRespirabilites", "npc2place.respirabilite");
 
       context.variationTemperature = await this.actor.getFlag("npc2place", "variationTemperature") ?? "";
       context.respirabilite = await this.actor.getFlag("npc2place", "respirabilite") ?? "";
@@ -168,6 +179,27 @@ export function createPlaneteSheet(SuperSheet) {
         let ressources = await this.actor.getFlag("npc2place", "ressources") ?? [];
         if (!ressources.includes(data.uuid)) {
           await this.actor.setFlag("npc2place", "ressources", [...ressources, data.uuid]);
+          this.render();
+        }
+      });
+
+      const dropVilles = html.find(".drop-villes");
+      dropVilles.on("dragover", ev => ev.preventDefault());
+      dropVilles.on("dragenter", () => dropVilles.addClass("dragover"));
+      dropVilles.on("dragleave", () => dropVilles.removeClass("dragover"));
+      dropVilles.on("drop", async ev => {
+        dropVilles.removeClass("dragover");
+        ev.preventDefault();
+
+        const data = JSON.parse(ev.originalEvent.dataTransfer.getData("text/plain"));
+        if (!data?.uuid) return;
+
+        const actor = await fromUuid(data.uuid);
+        if (!actor || actor.type !== "npc") return;
+
+        let lieux = await this.actor.getFlag("npc2place", "villes") ?? [];
+        if (!lieux.includes(data.uuid)) {
+          await this.actor.setFlag("npc2place", "villes", [...lieux, data.uuid]);
           this.render();
         }
       });
