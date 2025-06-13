@@ -93,7 +93,7 @@ Hooks.once("init", () => {
   });
 });
 
-Hooks.once("ready", () => {
+Hooks.once("ready", async () => {
   const SwadeNPCSheet = CONFIG.Actor.sheetClasses["npc"]["swade.SwadeNPCSheet"]?.cls;
   if (!SwadeNPCSheet) {
     console.warn(game.i18n.localize("npc2place.warnSwadeNotFound"));
@@ -126,6 +126,28 @@ Hooks.once("ready", () => {
     makeDefault: false,
     id: "npc2place-place-sheet"
   });
+
+  // 🛠 Initialisation automatique des settings vides
+  for (const [key, base] of [
+    ["listeTypesPlanete", "listeTypesPlanete"],
+    ["listeHabitabilites", "listeHabitabilites"],
+    ["listeEspeces", "listeEspeces"],
+    ["listeAffiliations", "listeAffiliations"],
+    ["listeTypesLieux", "listeTypesLieux"],
+    ["listeTaillesLieux", "listeTaillesLieux"],
+    ["listeGouvernances", "listeGouvernances"],
+    ["listeSituationsGeo", "listeSituationsGeo"],
+    ["listeActivites", "listeActivites"],
+    ["listeInfrastructures", "listeInfrastructures"]
+  ]) {
+    const currentValue = game.settings.get("npc2place", key);
+    if (!currentValue || currentValue.trim() === "") {
+      const defKey = `npc2place.settings.${base}.var`;
+      const value = game.i18n.localize(defKey);
+      await game.settings.set("npc2place", key, value);
+      console.log(`npc2place | Paramètre ${key} initialisé à la valeur par défaut.`);
+    }
+  }
 
   console.log(`${game.i18n.localize("npc2place.registerLog")} ${styleActif}`);
 });
