@@ -1,24 +1,47 @@
 {
   "id": "npc2place",
   "name": "npc2place",
-  "title": "SWADE - NPC to Place",
- "description": "Turn any NPC into a planet or location sheet in the Spatiopolis universe. Includes themes (sci-fi/medieval), editable dropdowns, drag & drop support, and full SWADE compatibility. Read the guide: https://www.stream-adventure.fr/npc2place/",
+  "title": "NPC to Place",
+  "description": "Permet de transformer un PNJ (type npc) en fiche de planète ou de lieu dans l’univers Spatiopolis, avec style visuel sélectionnable. Compatible avec SWADE.",
   "version": "1.0.0",
   "author": "Davy_mj",
+  "minimumCoreVersion": "11",
+  "compatibleCoreVersion": "13",
   "type": "module",
   "esmodules": ["scripts/main.js"],
+  "packs": [],
   "languages": [
-    { "lang": "fr", "name": "Français", "path": "lang/fr.json"},
-    { "lang": "en", "name": "English", "path": "lang/en.json"},
-    { "lang": "es", "name": "Español", "path": "lang/es.json"},
-    { "lang": "de", "name": "Deutsch", "path": "lang/de.json"}
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
   ],
+  "systems": ["swade"],
   "url": "https://www.stream-adventure.fr/npc2place/",
-  "readme": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/refs/heads/main/readme.en.md",
-  "manifest": "https://raw.githubusercontent.com/davy-MJ/NPC2PLACE/main/module.json",
-  "download": "https://github.com/davy-MJ/NPC2PLACE/raw/refs/heads/main/npc2place.zip",
+  "manifest": "https://www.stream-adventure.fr/npc2place/module.json",
+  "download": "https://www.stream-adventure.fr/npc2place/npc2place.zip",
   "icon": "modules/npc2place/icons/setup-cover.png",
   "media": [
+    {
+      "type": "setup",
+      "url": "modules/npc2place/icons/setup-cover.png"
+    },
     {
       "type": "cover",
       "url": "https://www.stream-adventure.fr/npc2place/setup-cover.png"
@@ -26,18 +49,6 @@
   ],
   "compatibility": {
     "minimum": "11",
-    "verified": "13",
-    "maximum": "13"
-  },
-  "relationships": {
-    "systems": [
-      {
-        "id": "swade",
-        "type": "system",
-        "compatibility": {}
-      }
-    ]
+    "verified": "13"
   }
 }
-
-
